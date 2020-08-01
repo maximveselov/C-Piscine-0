@@ -3,18 +3,42 @@
 #include <fcntl.h>
 
 
-int		check_int(char *num)
+int		check_int(char *num)	// check for a valid non-negative int
 {
 	int		i;
 
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] < '0' || str[i] > '9')
+		if (str[i] < '0' || str[i] > '9' || i > 37)
 			return (0);
 		i++;
 	}
 	return (1);
+}
+
+int		int_read(char *num)		// count number of digits
+{
+	int		i;
+
+	i = 0;
+	while (num[i])
+		i++;
+	return (i);
+}
+
+char	*array_read(char **num, char *argv)
+{
+	int		i;
+
+	i = 0;
+	while (*num[i])
+	{
+		if (int_read(*num[i]) == int_read(argv)) // compare number of digits 
+			return (*num[i]);  // between argv and dictionary
+		i++;
+	}
+	return (*num[i]);
 }
 
 int		main(int argc, char **argv)
