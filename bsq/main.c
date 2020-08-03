@@ -90,39 +90,16 @@ char	**read_file(char *file)
 	close(fd);
 	free(tab);
 	free(tmp);
-	print_tab(tab, j);
+	print_tab(tab, j + 1);
 	return (tab);
 }
-/*
-int		**convert_tab_to_int(char **tab, int k)
-{
-	int		i;
-	int		j;
-	int		**ret;
 
-	j = -1;
-	ret = (int **)malloc(sizeof(int **) * BUF_SIZE);
-	while (++j < k)
-	{
-		i = -1;
-		while (tab[j][++i] != '\0')
-		{
-			if (tab[j][i] == '.')
-				ret[j][i] = 0 - '0';
-			else if (tab[j][i] == 'o')
-				ret[j][i] = 1 - '0';
-		}
-	}
-	free(ret);
-	return (ret);
-}
-*/
 int		*convert_char_to_int(char *arr)
 {
 	int		*tab;
 	int		i;
 	int		j;
-	int		k;
+//	int		k;
 
 	i = 0;
 	j = 0;
@@ -130,32 +107,32 @@ int		*convert_char_to_int(char *arr)
 	while (arr[i] != '\n' && arr[i] != '\0')
 	{
 		if (arr[i] == '.')
-			tab[j] = 0;
-		else if (arr[i] == 'o')
 			tab[j] = 1;
+		else if (arr[i] == 'o')
+			tab[j] = 0;
 		i++;
 		j++;
 	}
-	for (k = 0; k < j; k++)
-		printf("%d\t", tab[k]);
+	free(tab);
+//	for (k = 0; k < j; k++)
+//		printf("%d\t", tab[k]);
 	return (tab);
 }
-/*
+
 int		**get_int_array(char **tab, int x)
 {
 	int		**arr;
-	int		i;
 	int		j;
 
-	i = 0;
 	j = 0;
 	arr = malloc(sizeof(int **) * BUF_SIZE);
 	while (j < x)
 	{
-		arr[j][0] = convert_char_to_int(tab[i][0]);
+		arr[j] = malloc(sizeof(int *) * BUF_SIZE);
+		arr[j] = convert_char_to_int(tab[j]);
 		j++;
-		i++;
 	}
+//	free(arr);
 	return (arr);
 }
 
@@ -165,28 +142,32 @@ void	print_int_tab(int **tab)
 	int		i;
 	int		j;
 
-	for (i = 0; i < 8; i++)
+	for (i = 0; i < 9; i++)
 	{
 		printf("\n");
 		for (j = 0; j < 27; j++)
-			printf("%d\t", tab[i][j]);
+			printf("%d", tab[i][j]);
 	}
-}*/
+}
+
 
 int		main(int argc, char **argv)
 {
 	char	**tab;
-	int		*arr;
+	int		**arr;
 
 	if (argc != 2)
 		return (0);
 	else
 	{
 		tab = read_file(argv[1]);
-		arr = convert_char_to_int(tab[1]);
-//		test = get_int_array(tab, 8);
+//		arr = convert_char_to_int(tab[2]);
+		ft_putstr("\n");
+	//	ft_putstr(tab[2]);
+		arr = get_int_array(tab, 9);
 //		arr = convert_tab_to_int(tab, 27);
-//		print_int_tab(arr);
+		print_int_tab(arr);
+		get_tab_size(arr);
 	}
 	return (0);
 }
