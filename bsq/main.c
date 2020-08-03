@@ -93,7 +93,7 @@ char	**read_file(char *file)
 	print_tab(tab, j);
 	return (tab);
 }
-
+/*
 int		**convert_tab_to_int(char **tab, int k)
 {
 	int		i;
@@ -101,22 +101,65 @@ int		**convert_tab_to_int(char **tab, int k)
 	int		**ret;
 
 	j = -1;
-	ret = malloc(sizeof(int **) * BUF_SIZE);
+	ret = (int **)malloc(sizeof(int **) * BUF_SIZE);
 	while (++j < k)
 	{
 		i = -1;
-		while (tab[j][++i])
+		while (tab[j][++i] != '\0')
 		{
 			if (tab[j][i] == '.')
-				ret[j][i] = 0;
+				ret[j][i] = 0 - '0';
 			else if (tab[j][i] == 'o')
-				ret[j][i] = 1;
+				ret[j][i] = 1 - '0';
 		}
 	}
 	free(ret);
 	return (ret);
 }
+*/
+int		*convert_char_to_int(char *arr)
+{
+	int		*tab;
+	int		i;
+	int		j;
+	int		k;
+
+	i = 0;
+	j = 0;
+	tab = malloc(sizeof(int *) * BUF_SIZE);
+	while (arr[i] != '\n' && arr[i] != '\0')
+	{
+		if (arr[i] == '.')
+			tab[j] = 0;
+		else if (arr[i] == 'o')
+			tab[j] = 1;
+		i++;
+		j++;
+	}
+	for (k = 0; k < j; k++)
+		printf("%d\t", tab[k]);
+	return (tab);
+}
 /*
+int		**get_int_array(char **tab, int x)
+{
+	int		**arr;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	arr = malloc(sizeof(int **) * BUF_SIZE);
+	while (j < x)
+	{
+		arr[j][0] = convert_char_to_int(tab[i][0]);
+		j++;
+		i++;
+	}
+	return (arr);
+}
+
+
 void	print_int_tab(int **tab)
 {
 	int		i;
@@ -132,15 +175,17 @@ void	print_int_tab(int **tab)
 
 int		main(int argc, char **argv)
 {
-	int		**arr;
 	char	**tab;
+	int		*arr;
 
 	if (argc != 2)
 		return (0);
 	else
 	{
 		tab = read_file(argv[1]);
-		arr = convert_tab_to_int(tab, 27);
+		arr = convert_char_to_int(tab[1]);
+//		test = get_int_array(tab, 8);
+//		arr = convert_tab_to_int(tab, 27);
 //		print_int_tab(arr);
 	}
 	return (0);
