@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #define BUF_SIZE 4096
+#define LEN(arr) ((int) (sizeof (arr) / sizeof (arr) [0]))
 
 void	ft_putstr(char *str)
 {
@@ -75,7 +76,7 @@ char	**read_file(char *file)
 
 	j = -1;
 	tab = (char **)malloc(sizeof(tab) * (BUF_SIZE));
-	fd = open(file, O_RDONLY);
+	fd = open_file(file);
     while (read(fd, c, 1))
 	{
 		i = -1;
@@ -163,11 +164,11 @@ int		main(int argc, char **argv)
 		tab = read_file(argv[1]);
 //		arr = convert_char_to_int(tab[2]);
 		ft_putstr("\n");
+	//	int total = sizeof(tab)
 	//	ft_putstr(tab[2]);
 		arr = get_int_array(tab, 9);
 //		arr = convert_tab_to_int(tab, 27);
 		print_int_tab(arr);
-		get_tab_size(arr);
 	}
 	return (0);
 }
