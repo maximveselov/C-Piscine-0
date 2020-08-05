@@ -34,6 +34,7 @@ int		*get_square_index(int max, int **mat, char **tab);
 char	**change_map_to_answer(int size, int string, int pos, char **tmp);	// меняет в начальном массиве символы пустоты на квадрат
 void	draw(char **answer);	// отрисовывает двумерный массив чаров
 char	**parse_input(void);
-
+void	construct_matrix(char *argv);
+void	construct_from_input(char **input);
 #endif
 
