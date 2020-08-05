@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 20:26:05 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 20:31:17 by abrian           ###   ########.fr       */
+/*   Updated: 2020/08/05 20:49:00 by aannett          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,18 @@ void	construct_matrix(char *argv)
 	int		**intfile;
 	int		**intarr;
 	int		*index;
-
+	
+	if (!open_f(argv))
+	{
+		ft_putstr("map error");
+		return ;
+	}
 	file = read_f(argv);
 	if (!err_catcher(file) || !str_compare(file))
 	{
 		ft_putstr("map error");
 		return ;
 	}
-	// check
 	intfile = malloc(sizeof(int **) * ft_strlen(file[1]) * str_count_buff(file));
 	intarr = malloc(sizeof(int **) * ft_strlen(file[1]) * str_count_buff(file));
 	intfile = fetch_int_arr(file, str_count_buff(file));
