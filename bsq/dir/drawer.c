@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 19:12:30 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 19:12:41 by abrian           ###   ########.fr       */
+/*   Updated: 2020/08/05 20:03:08 by abrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	**empty_to_sqr(int size, int string, int pos, char **tmp)
 	return (tmp);
 }
 
-void	map_ot_arr(char **answer)
+void	map_out_arr(char **answer)
 {
 	int		j;
 	int		i;
