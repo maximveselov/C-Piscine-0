@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 19:29:06 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 20:13:38 by aannett          ###   ########.fr       */
+/*   Updated: 2020/08/05 21:01:58 by abrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	**parse_file(int file)
 	return (tab);
 }
 
-char    **read_file(char *file)//функция использует ft_strdup и функцию  open_file и функцию print_tab
+char    **read_f(char *file)
 {
 	int	fd;
 

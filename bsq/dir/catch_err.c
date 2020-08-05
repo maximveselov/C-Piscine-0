@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 19:44:34 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 19:49:34 by abrian           ###   ########.fr       */
+/*   Updated: 2020/08/05 21:00:17 by abrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	err_catcher(char **file)
 	emp = fetch_empt_char(file);
 	full = fetch_full_char(file);
 	if (err_check_str(file[0]) < 0)
-	   return (0);
+		return (0);
 	if (fetch_line_nbr(file[0], emp, obs, full) != str_count_buff(file))
 		return (0);
 	return (1);
