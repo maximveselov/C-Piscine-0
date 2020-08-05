@@ -4,14 +4,16 @@ char	**change_map_to_answer(int size, int string, int pos, char **tmp)
 {
 	int a;
 	int b;
+	char	filler;
 
 	a = 0;
+	filler = get_full_c(tmp);
 	while (a < size)
 	{
 		b = 0;
 		while (b < size)
 		{
-			tmp[string - a][pos - b - 1] = 'x';// допилю потом, как это правильно сделать, сейчас просто на кресты меняю
+			tmp[string - a][pos - b - 1] = filler;// допилю потом, как это правильно сделать, сейчас просто на кресты меняю
 			b++;
 		}
 		a++;
