@@ -6,12 +6,10 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 20:15:58 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 20:16:31 by abrian           ###   ########.fr       */
+/*   Updated: 2020/08/05 20:18:57 by aannett          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define BUF_SIZE 4096
-#define LEN(arr) ((int) (sizeof (arr) / sizeof (arr) [0]))
 #include "bsq.h"
 
 void    ft_putstr(char *str)
