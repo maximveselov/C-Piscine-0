@@ -1,3 +1,5 @@
+#include "bsq.h"
+
 void	construct_for_line(char **tab)
 {
 	int		i;
