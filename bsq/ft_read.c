@@ -15,32 +15,37 @@ int     open_file(char *file)
         return (fd);
 }
 
+char	**parse_file(int file)
+{
+	int		i;
+	int		j;
+	char	*tmp;
+	char	**tab;
+	char	c[1];
+
+	tab = (char **)malloc(sizeof(tab) * BUF_SIZE);
+	j = -1;
+	while (read(file, c, 1))
+	{
+		i = -1;
+		tmp = malloc(sizeof(char *) * BUF_SIZE);
+		while (c[0] != '\n')
+		{
+			tmp[++i] = c[0];
+			read(file, c, 1);
+		}
+		tab[++j] = ft_strdup(tmp);
+	}
+	close(file);
+	free(tab);
+	free(tmp);
+	return (tab);
+}
+
 char    **read_file(char *file)//функция использует ft_strdup и функцию  open_file и функцию print_tab
 {
-    int     i;
-    char    *tmp;
-    char    **tab;
-    char    c[1];
-    int     j;
     int     fd;
 
-    j = -1;
-    tab = (char **)malloc(sizeof(tab) * (BUF_SIZE));
     fd = open_file(file);
-    while (read(fd, c, 1))
-    {
-        i = -1;
-        tmp = malloc(sizeof(char *) * BUF_SIZE);
-        while (c[0] != '\n')
-        {
-            tmp[++i] = c[0];
-            read(fd, c, 1);
-        }
-        tab[++j] = ft_strdup(tmp);
-    }
-    close(fd);
-    free(tab);
-    free(tmp);
-    print_tab(tab, j + 1);
-    return (tab);
+    return (parse_file(fd));
 }
