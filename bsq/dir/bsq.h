@@ -6,14 +6,14 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 20:00:31 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 20:00:36 by abrian           ###   ########.fr       */
+/*   Updated: 2020/08/05 20:11:29 by aannett          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BSQ_H
 # define BSQ_H
 
-# define BUF_SIZE 4096
+# define BUF_SIZE 99999
 # define LEN(arr) ((int) (sizeof (arr) / sizeof (arr) [0]))
 # include <stdio.h>
 # include <unistd.h>
@@ -27,7 +27,7 @@ void    output_tab(char **tab, int i);
 char	**read_f(char *file);
 int		*change_char_to_int(char *arr, char **file);
 int		**fetch_int_arr(char **tab, int x);
-void	output_int_tab(int **tab);
+void	output_int_tab(int **tab, char **char_tab);
 int		ft_atoi(char *str);
 int		custom_isspace(char c);
 int		fetch_line_nbr(char *optional, char empty, char obstacle, char full);
