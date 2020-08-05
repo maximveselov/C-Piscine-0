@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 20:00:31 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 22:06:09 by abrian           ###   ########.fr       */
+/*   Updated: 2020/08/05 22:47:54 by aannett          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int		open_f(char *file);
 char	**read_f(char *file);
 int		*change_char_to_int(char *arr, char **file);
 int		**fetch_int_arr(char **tab, int x);
-void	output_int_tab(int **tab, char **char_tab);
 int		ft_atoi(char *str);
 int		custom_isspace(char c);
 int		fetch_line_nbr(char *optional, char empty, char obstacle, char full);
@@ -50,5 +49,8 @@ void	construct_from_input(char **input);
 int		err_catcher(char **file);
 int		str_compare(char **file);
 void	construct_for_line(char **tab);
+int		**add_fetch_sqr(int **mat, int **ret, char **tab);
+void	output_tab(char **tab, int i);
+void	add_mat(int **mat, char **tab, int **ret);
 
 #endif

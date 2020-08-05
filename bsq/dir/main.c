@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 22:03:23 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 22:04:59 by abrian           ###   ########.fr       */
+/*   Updated: 2020/08/05 22:21:05 by aannett          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	main(int argc, char **argv)
 {
 	char	**input;
-	int		lines;
 	int		i;
 
 	if (argc == 1)
