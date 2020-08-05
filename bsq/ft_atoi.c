@@ -29,5 +29,5 @@ int		ft_atoi(char *str)
 		meaning += *str - '0';
 		str++;
 	}
-	return (meaning);
+	return (meaning * sign);
 }

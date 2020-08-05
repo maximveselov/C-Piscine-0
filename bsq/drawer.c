@@ -1,4 +1,5 @@
-#include <unistd.h>
+#include "bsq.h"
+
 char	**change_map_to_answer(int size, int string, int pos, char **tmp)
 {
 	int a;
@@ -20,13 +21,26 @@ char	**change_map_to_answer(int size, int string, int pos, char **tmp)
 
 void	draw(char **answer)
 {
-	while (answer)
-	{;
-		while (*answer)
+	int j;
+	int i;
+	int len;
+	int str;
+
+	i = 0;
+	answer++;
+	str = string_count_from_buffer(answer);
+	len = ft_strlen(answer[1]);
+	while (i <= str)
+	{
+		j = 0;
+		while (j < len)
 		{
 			write (1, *answer, 1);
 			(*answer)++;
+			j++;
 		}
+		write(1, "\n", 1);
+		i++;
 		answer++;
 	}
 }

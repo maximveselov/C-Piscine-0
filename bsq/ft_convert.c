@@ -43,16 +43,18 @@ int     **get_int_array(char **tab, int x)//функция использует 
 //  free(arr);
     return (arr);
 }
-
-void    print_int_tab(int **tab)
+void    print_int_tab(int **tab, char **char_tab)
 {
     int     i;
     int     j;
-
-    for (i = 0; i < 9; i++)
+    int     size;
+    
+    size = string_count_from_buffer(char_tab);
+    printf("%d    asdasfgdsgfdsg hfd hdgf nghfn hfg nfhgn f", size);
+    for (i = 0; i < size; i++)
     {
         printf("\n");
-        for (j = 0; j < 27; j++)
+        for (j = 0; j < ft_strlen(char_tab[1]); j++)
             printf("%d", tab[i][j]);
     }
 }

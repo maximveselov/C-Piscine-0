@@ -8,9 +8,9 @@ int     get_max_num(int **mat, char **tab)
 
     i = 1;
     k = 0;
-    while (i < 9 /*rowcount*/)
+    while (i < string_count_from_buffer(tab) /*rowcount*/)
     {
-        j = 1;
+        j = 0;
         while (j < ft_strlen(tab[1]))
         {
             if (mat[i][j] > k)
@@ -30,7 +30,7 @@ int		*get_square_index(int max, int **mat, char **tab)
 
 	i = 1;
 	ind = malloc(sizeof(int *) * BUF_SIZE);
-	while (i < 9 /*rowcount*/)
+	while (i < string_count_from_buffer(tab) /*rowcount*/)
 	{
 		j = 1;
 		while (j < ft_strlen(tab[1]))
@@ -47,4 +47,3 @@ int		*get_square_index(int max, int **mat, char **tab)
 	}
 	return (ind);
 }
-
