@@ -6,11 +6,8 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 19:29:06 by abrian            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2020/08/05 21:01:58 by abrian           ###   ########.fr       */
-=======
+/*   Updated: 2020/08/05 21:11:27 by abrian           ###   ########.fr       */
 /*   Updated: 2020/08/05 20:51:56 by aannett          ###   ########.fr       */
->>>>>>> ffa86dcfd2f0f246e0429e1fd589c05448c0eed2
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +53,8 @@ char	**parse_file(int file)
 	return (tab);
 }
 
-<<<<<<< HEAD
 char    **read_f(char *file)
-=======
-char    **read_f(char *file)//функция использует ft_strdup и функцию  open_file и функцию print_tab
->>>>>>> ffa86dcfd2f0f246e0429e1fd589c05448c0eed2
+char    **read_f(char *file)
 {
 	int	fd;
 
