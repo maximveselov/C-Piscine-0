@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 19:14:08 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 20:13:53 by aannett          ###   ########.fr       */
+/*   Updated: 2020/08/05 21:52:10 by abrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ int	*fetch_sqr_indx(int max, int **mat, char **tab)
 	int	j;
 	int	*ind;
 	
-	i = 1;
+	i = 0;
 	ind = malloc(sizeof(int *) * BUF_SIZE);
 	while (i < str_count_buff(tab) /*rowcount*/)
 	{
-		j = 1;
+		j = 0;
 		while (j < ft_strlen(tab[1]))
 		{
 			if (mat[i][j] == max)
