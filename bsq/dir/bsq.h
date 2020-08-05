@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 20:00:31 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 20:47:36 by aannett          ###   ########.fr       */
+/*   Updated: 2020/08/05 21:14:46 by aannett          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ void	construct_matrix(char *argv);
 void	construct_from_input(char **input);
 int		err_catcher(char **file);
 int		str_compare(char **file);
+void	construct_for_line(char **tab);
 
 #endif
