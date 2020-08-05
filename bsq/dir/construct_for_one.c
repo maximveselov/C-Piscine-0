@@ -7,6 +7,7 @@ void	construct_for_line(char **tab)
 	char	emp;
 	char	full;
 
+	tab = malloc(sizeof(char **) * BUF_SIZE);
 	obs = fetch_obstcl_char(tab);
 	emp = fetch_empt_char(tab);
 	full = fetch_full_char(tab);
@@ -17,4 +18,6 @@ void	construct_for_line(char **tab)
 			tab[1][i] = full;
 		i++;
 	}
+	map_out_arr(tab);
+	free(tab);
 }

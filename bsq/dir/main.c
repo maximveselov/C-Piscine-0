@@ -3,6 +3,7 @@
 int		main(int argc, char **argv)
 {
 	char	**input;
+	int		lines;
 
 	if (argc == 1)
 	{
