@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 20:00:31 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 21:28:17 by aannett          ###   ########.fr       */
+/*   Updated: 2020/08/05 22:06:09 by abrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 void	ft_putstr(char *str);
 char	*ft_strdup(char *src);
 int		open_f(char *file);
-void    output_tab(char **tab, int i);
 char	**read_f(char *file);
 int		*change_char_to_int(char *arr, char **file);
 int		**fetch_int_arr(char **tab, int x);
@@ -43,8 +42,8 @@ int		read_str_line_nbr(char *optional_str, char *empty_ch, char *obstacle_ch, ch
 int		str_count_buff(char **buffer);
 int		fetch_max_nbr(int **mat, char **tab);
 int		*fetch_sqr_indx(int max, int **mat, char **tab);
-char	**empty_to_sqr(int size, int string, int pos, char **tmp);// меняет в начальном массиве символы пустоты на квадрат
-void	map_out_arr(char **answer);	// отрисовывает двумерный массив чаров
+char	**empty_to_sqr(int size, int string, int pos, char **tmp);
+void	map_out_arr(char **answer);
 char	**parse_input(void);
 void	construct_matrix(char *argv);
 void	construct_from_input(char **input);

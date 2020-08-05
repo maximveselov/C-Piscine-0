@@ -5,9 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/05 19:29:06 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 21:16:18 by aannett          ###   ########.fr       */
-/*   Updated: 2020/08/05 20:51:56 by aannett          ###   ########.fr       */
+/*   Created: 2020/08/05 21:44:24 by abrian            #+#    #+#             */
+/*   Updated: 2020/08/05 21:45:11 by abrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +27,8 @@ int		open_f(char *file)
 
 char	**parse_file(int file)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*tmp;
 	char	**tab;
 	char	c[1];
@@ -53,7 +52,7 @@ char	**parse_file(int file)
 	return (tab);
 }
 
-char    **read_f(char *file)
+char	**read_f(char *file)
 {
 	int	fd;
 

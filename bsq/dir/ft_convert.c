@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 19:12:57 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 20:13:32 by aannett          ###   ########.fr       */
+/*   Updated: 2020/08/05 21:43:50 by abrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		*change_char_to_int(char *arr, char **file)
 	return (tab);
 }
 
-int		**fetch_int_arr(char **tab, int x) /* функция использует change_char_to_int */
+int		**fetch_int_arr(char **tab, int x)
 {
 	int	**arr;
 	int	j;
@@ -50,22 +50,5 @@ int		**fetch_int_arr(char **tab, int x) /* функция использует c
 		j++;
 		i++;
 	}
-//  free(arr);
 	return (arr);
-}
-
-void	output_int_tab(int **tab, char **char_tab)
-{
-	int	i;
-	int	j;
-	int	size;
-	
-	size = str_count_buff(char_tab);
-	printf("%d    asdasfgdsgfdsg hfd hdgf nghfn hfg nfhgn f", size);
-	for (i = 0; i < size; i++)
-    {
-		printf("\n");
-		for (j = 0; j < ft_strlen(char_tab[1]); j++)
-			printf("%d", tab[i][j]);
-	}
 }

@@ -6,15 +6,15 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 19:24:21 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 20:13:23 by aannett          ###   ########.fr       */
+/*   Updated: 2020/08/05 21:41:29 by abrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-int  ft_strlen (char *str)
+int		ft_strlen(char *str)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (*str)
@@ -22,14 +22,12 @@ int  ft_strlen (char *str)
 		str++;
 		len++;
 	}
-		return (len);
+	return (len);
 }
-// нужна функция работы с первой строкой.
 
-int		examine_map(char **file_name, int line_count,  char empty, char obstacle)// использует функцию strlen и функцию read_option_str
+int		examine_map(char **file_name, int line_count, char empty,
+		char obstacle)
 {
-//	if (read_option_str(**file_line) < 0) // функци, которая работает с первой строкой
-//		return (0);
 	int i;
 	int j;
 	int len;
@@ -39,7 +37,7 @@ int		examine_map(char **file_name, int line_count,  char empty, char obstacle)//
 	{
 		len = ft_strlen(file_name[i]);
 		if (len < 1)
-            return (0);
+			return (0);
 		if ((i != 1) && (len != ft_strlen(file_name[i - 1])))
 			return (0);
 		j = 0;
@@ -47,9 +45,9 @@ int		examine_map(char **file_name, int line_count,  char empty, char obstacle)//
 		{
 			if (file_name[i][j] != empty && file_name[i][j] != obstacle)
 				return (0);
-		j++;
+			j++;
 		}
-	i++;
+		i++;
 	}
 	return (1);
 }

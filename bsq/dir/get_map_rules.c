@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 19:26:56 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 21:13:05 by aannett          ###   ########.fr       */
+/*   Updated: 2020/08/05 21:56:41 by abrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,25 @@
 char	fetch_empt_char(char **c)
 {
 	int i;
-    i = ft_strlen(c[0]);
-    return c[0][i-3];
+
+	i = ft_strlen(c[0]);
+	return (c[0][i - 3]);
 }
 
 char	fetch_obstcl_char(char **c)
 {
 	int i;
-    i = ft_strlen(c[0]);
-    return c[0][i-2];
+
+	i = ft_strlen(c[0]);
+	return (c[0][i - 2]);
 }
 
 char	fetch_full_char(char **c)
 {
-    int i;
-    i = ft_strlen(c[0]);
-	return c[0][i-1];
+	int i;
+
+	i = ft_strlen(c[0]);
+	return (c[0][i - 1]);
 }
 
 int		fetch_line_nbr(char *optional, char empty, char obstacle, char full)

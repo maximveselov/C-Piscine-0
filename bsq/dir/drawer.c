@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 19:12:30 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 20:13:16 by aannett          ###   ########.fr       */
+/*   Updated: 2020/08/05 21:35:54 by abrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	**empty_to_sqr(int size, int string, int pos, char **tmp)
 {
-	int 	a;
-	int 	b;
+	int		a;
+	int		b;
 	char	filler;
 
 	a = 0;
@@ -49,7 +49,7 @@ void	map_out_arr(char **answer)
 		j = 0;
 		while (j < len)
 		{
-			write (1, *answer, 1);
+			write(1, *answer, 1);
 			(*answer)++;
 			j++;
 		}
