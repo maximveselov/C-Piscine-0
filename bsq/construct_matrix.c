@@ -15,3 +15,16 @@ void	construct_matrix(char *argv)
 	file = change_map_to_answer(get_max_num(intarr, file), index[0], index[1], file);
 	print_tab(file, string_count_from_buffer(file) + 1);
 }
+
+void	construct_from_input(char **input)
+{
+	int		**intfile;
+	int		**intarr;
+	int		*index;
+	
+	intfile = get_int_array(input, string_count_from_buffer(input));
+	intarr = get_max_square(intfile, input);
+	index = get_square_index(get_max_num(intarr, input), intarr, input);
+	input = change_map_to_answer(get_max_num(intarr, input), index[0], index[1], input);
+	print_tab(input, string_count_from_buffer(input) + 1);
+}

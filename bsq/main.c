@@ -13,10 +13,9 @@ int		main(int argc, char **argv)
 
 	if (argc == 1)
 	{
-		input = NULL;
-/*		input = parse_input();
-		arr = get_int_array(input, 9);
-		print_int_tab(arr, tab);*/
+		input = parse_input();
+		construct_from_input(input);
+		return (0);
 	}
 	else
 	{

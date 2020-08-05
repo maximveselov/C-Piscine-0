@@ -35,5 +35,6 @@ char	**change_map_to_answer(int size, int string, int pos, char **tmp);	// ме�
 void	draw(char **answer);	// отрисовывает двумерный массив чаров
 char	**parse_input(void);
 void	construct_matrix(char *argv);
+void	construct_from_input(char **input);
 #endif
 
