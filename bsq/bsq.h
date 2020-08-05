@@ -15,7 +15,7 @@ void    print_tab(char **tab, int i);
 char	**read_file(char *file);
 int		*convert_char_to_int(char *arr, char **file);
 int		**get_int_array(char **tab, int x);
-void	print_int_tab(int **tab);
+void	print_int_tab(int **arr, char **tab);
 int		ft_atoi(char *str);
 int		my_isspace(char c);
 int		get_line_n(char *optional, char empty, char obstacle, char full);
@@ -33,6 +33,7 @@ int		get_max_num(int **mat, char **tab);
 int		*get_square_index(int max, int **mat, char **tab);
 char	**change_map_to_answer(int size, int string, int pos, char **tmp);	// меняет в начальном массиве символы пустоты на квадрат
 void	draw(char **answer);	// отрисовывает двумерный массив чаров
+char	**parse_input(void);
 
 #endif
 
