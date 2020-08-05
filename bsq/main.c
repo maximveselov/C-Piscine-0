@@ -5,22 +5,28 @@
 int		main(int argc, char **argv)
 //функция временно использует ft_putchar и использует функцию  convert_char_to_int и функцию get_int_array и функцию print_int_tab
 {
-	char	**tab;
+/*	char	**tab;
 	int		**arr;
     int		**secarr;
 	int		*test;
-	char	**input;
+*/	char	**input;
 
 	if (argc == 1)
 	{
-		tab = NULL;
-		input = parse_input();
+		input = NULL;
+/*		input = parse_input();
 		arr = get_int_array(input, 9);
-		print_int_tab(arr, tab);
+		print_int_tab(arr, tab);*/
 	}
 	else
 	{
-		tab = read_file(argv[1]);
+		int 	i = 1;
+		while (i < argc)
+		{
+			construct_matrix(argv[i]);
+			i++;
+		}
+/*		tab = read_file(argv[1]);
 //		arr = convert_char_to_int(tab[2]);
 		ft_putstr("\n");
 		if (err_option_str(tab[0]) < 0)
@@ -37,7 +43,7 @@ int		main(int argc, char **argv)
 		test = get_square_index(get_max_num(secarr, tab), secarr, tab);
 		printf("\n%d\n%d", test[0], test[1]);
 		tab = change_map_to_answer(get_max_num(secarr, tab), test[0], test[1],tab);	// меняем условие на ответ (смотри как работает функция в drawer.c и bsq.h)
-		print_tab(tab, string_count_from_buffer(tab) + 1);
+		print_tab(tab, string_count_from_buffer(tab) + 1); */
 	}
 	return (0);
 }
