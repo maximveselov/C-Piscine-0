@@ -1,18 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   drawer.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/08/05 19:12:30 by abrian            #+#    #+#             */
+/*   Updated: 2020/08/05 19:12:41 by abrian           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <unistd.h>
+#include "bsq.h"
 
 char	**empty_to_sqr(int size, int string, int pos, char **tmp)
 {
-	int	a;
-	int	b;
+	int 	a;
+	int 	b;
+	char	filler;
 
 	a = 0;
+	filler = fetch_full_char(tmp);
 	while (a < size)
 	{
 		b = 0;
 		while (b < size)
 		{
-			tmp[string - a][pos - b - 1] = 'x';// допилю потом, как это правильно сделать, сейчас просто на кресты меняю
+			tmp[string - a][pos - b - 1] = filler;
 			b++;
 		}
 		a++;
@@ -20,15 +33,28 @@ char	**empty_to_sqr(int size, int string, int pos, char **tmp)
 	return (tmp);
 }
 
-void	map_out_arr(char **answer)
+void	map_ot_arr(char **answer)
 {
-	while (answer)
+	int		j;
+	int		i;
+	int		len;
+	int		str;
+
+	i = 0;
+	answer++;
+	str = str_count_buff(answer);
+	len = ft_strlen(answer[1]);
+	while (i <= str)
 	{
-		while (*answer)
+		j = 0;
+		while (j < len)
 		{
-			write(1, *answer, 1);
+			write (1, *answer, 1);
 			(*answer)++;
+			j++;
 		}
+		write(1, "\n", 1);
+		i++;
 		answer++;
 	}
 }

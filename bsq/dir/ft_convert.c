@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_convert.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/08/05 19:12:57 by abrian            #+#    #+#             */
+/*   Updated: 2020/08/05 19:16:06 by abrian           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #define BUF_SIZE 4096
 #define LEN(arr) ((int) (sizeof (arr) / sizeof (arr) [0]))
 #include "bsq.h"
@@ -44,15 +56,18 @@ int		**fetch_int_arr(char **tab, int x) /* функция использует c
 	return (arr);
 }
 
-void	output_int_tab(int **tab)
+void	output_int_tab(int **tab, char **char_tab)
 {
 	int	i;
 	int	j;
-
-	for (i = 0; i < 9; i++)
-	{
+	int	size;
+	
+	size = str_count_buff(char_tab);
+	printf("%d    asdasfgdsgfdsg hfd hdgf nghfn hfg nfhgn f", size);
+	for (i = 0; i < size; i++)
+    {
 		printf("\n");
-		for (j = 0; j < 27; j++)
+		for (j = 0; j < ft_strlen(char_tab[1]); j++)
 			printf("%d", tab[i][j]);
 	}
 }
