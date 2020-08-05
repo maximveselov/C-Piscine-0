@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 20:00:31 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 22:47:54 by aannett          ###   ########.fr       */
+/*   Updated: 2020/08/05 22:52:34 by abrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,15 @@ int		custom_isspace(char c);
 int		fetch_line_nbr(char *optional, char empty, char obstacle, char full);
 char	fetch_empt_char(char **c);
 char	fetch_obstcl_char(char **c);
-char	fetch_full_char(char **c);	
+char	fetch_full_char(char **c);
 int		**fetch_max_sqr(int **mat, char **tab);
 int		ft_strlen(char *str);
-int		examine_map(char **file_name, int line_count, char empty, char obstacle);
+int		examine_map(char **file_name, int line_count, char empty,
+		char obstacle);
 int		fetch_min_val(int a, int b, int c);
 int		err_check_str(char *optional_str);
-int		read_str_line_nbr(char *optional_str, char *empty_ch, char *obstacle_ch, char *full_ch);
+int		read_str_line_nbr(char *optional_str, char *empty_ch, char *obstacle_ch,
+		char *full_ch);
 int		str_count_buff(char **buffer);
 int		fetch_max_nbr(int **mat, char **tab);
 int		*fetch_sqr_indx(int max, int **mat, char **tab);

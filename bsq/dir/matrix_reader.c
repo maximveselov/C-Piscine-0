@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 19:14:08 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 22:00:40 by abrian           ###   ########.fr       */
+/*   Updated: 2020/08/05 23:23:59 by aannett          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	fetch_max_nbr(int **mat, char **tab)
 	int	j;
 	int	k;
 
-	i = 1;
+	i = 0;
 	k = 0;
 	while (i < str_count_buff(tab))
 	{
@@ -50,7 +50,7 @@ int	*fetch_sqr_indx(int max, int **mat, char **tab)
 			if (mat[i][j] == max)
 			{
 				ind[0] = i + 1;
-				ind[1] = j + 1;
+				ind[1] = j;
 				return (ind);
 			}
 			j++;

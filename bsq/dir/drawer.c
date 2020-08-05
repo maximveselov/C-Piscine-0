@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 19:12:30 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 22:21:51 by aannett          ###   ########.fr       */
+/*   Updated: 2020/08/05 23:22:01 by aannett          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	**empty_to_sqr(int size, int string, int pos, char **tmp)
 		b = 0;
 		while (b < size)
 		{
-			tmp[string - a][pos - b - 1] = filler;
+			tmp[string - a][pos - b] = filler;
 			b++;
 		}
 		a++;
