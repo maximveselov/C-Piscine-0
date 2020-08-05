@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 19:29:06 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 21:13:49 by aannett          ###   ########.fr       */
+/*   Updated: 2020/08/05 21:16:18 by aannett          ###   ########.fr       */
 /*   Updated: 2020/08/05 20:51:56 by aannett          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -53,7 +53,6 @@ char	**parse_file(int file)
 	return (tab);
 }
 
-char    **read_f(char *file)
 char    **read_f(char *file)
 {
 	int	fd;
