@@ -22,11 +22,7 @@ void	construct_matrix(char *argv)
 	int		**intfile;
 	int		**intarr;
 	int		*index;
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> ffa86dcfd2f0f246e0429e1fd589c05448c0eed2
 	if (!open_f(argv))
 	{
 		ft_putstr("map error\n");
