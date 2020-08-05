@@ -6,7 +6,7 @@
 /*   By: abrian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 20:15:16 by abrian            #+#    #+#             */
-/*   Updated: 2020/08/05 20:15:19 by abrian           ###   ########.fr       */
+/*   Updated: 2020/08/05 20:19:25 by aannett          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_atoi(char *str)
 
 	sign = 1;
 	meaning = 0;
-	while(my_isspace(*str))
+	while(custom_isspace(*str))
 		str++;
 	while(*str == '+' || *str == '-')
 	{
