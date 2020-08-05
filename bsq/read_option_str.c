@@ -6,6 +6,8 @@ int	err_option_str(char *optional_str)
 
 	flag = 0;
 	count_ch = 0;
+	if (*optional_str == '-')
+		return (-1);
 	while ((*optional_str) && (*optional_str != '\0' || *optional_str != '\n'))
 	{
 		if (((*optional_str < '0') || (*optional_str > '9')) && (flag == 0))

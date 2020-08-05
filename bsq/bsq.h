@@ -36,5 +36,7 @@ void	draw(char **answer);	// отрисовывает двумерный мас�
 char	**parse_input(void);
 void	construct_matrix(char *argv);
 void	construct_from_input(char **input);
+int		err_catcher(char **file);
+int		str_compare(char **file);
 #endif
 

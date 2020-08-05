@@ -8,7 +8,14 @@ void	construct_matrix(char *argv)
 	int		*index;
 
 	file = read_file(argv);
+	if (!err_catcher(file) || !str_compare(file))
+	{
+		ft_putstr("map error");
+		return ;
+	}
 	// check
+	intfile = malloc(sizeof(int **) * ft_strlen(file[1]) * string_count_from_buffer(file));
+	intarr = malloc(sizeof(int **) * ft_strlen(file[1]) * string_count_from_buffer(file));
 	intfile = get_int_array(file, string_count_from_buffer(file));
 	intarr = get_max_square(intfile, file);
 	index = get_square_index(get_max_num(intarr, file), intarr, file);
@@ -22,6 +29,11 @@ void	construct_from_input(char **input)
 	int		**intarr;
 	int		*index;
 	
+	if (!err_catcher(input) || !str_compare(input))
+	{
+		ft_putstr("map error");
+		return ;
+	}
 	intfile = get_int_array(input, string_count_from_buffer(input));
 	intarr = get_max_square(intfile, input);
 	index = get_square_index(get_max_num(intarr, input), intarr, input);
